@@ -1,0 +1,24 @@
+<h1><%= Survey.find(@id).name %></h1>
+
+<h3>Add a Question</h3>
+
+<form action="/surveys/<%= @id %>" method="post">
+  <div class="form-group">
+    <label for="question">Question Name</label>
+    <input type="text" class="form-control" name="question" placeholder="e.g. What's your favorite candy?">
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-md">Submit</button>
+</form>
+
+<table class="table">
+  <tr>
+    <th>Question Name</th>
+  </tr>
+
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.question %></td>
+    </tr>
+  <% end %>
+</table>

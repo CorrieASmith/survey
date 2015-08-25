@@ -1,0 +1,26 @@
+<h1>Surveys</h1>
+
+<h3>Create a Survey</h3>
+
+<form action="/surveys" method="post">
+  <div class="form-group">
+    <label for="name">Survey Name</label>
+    <input type="text" class="form-control" name="name" placeholder="e.g. Which Mario character are you?">
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-md">Submit</button>
+</form>
+
+<table class="table">
+  <tr>
+    <th>Survey Name</th>
+    <th>Number of Questions</th>
+  </tr>
+
+  <% @surveys.each do |survey| %>
+    <tr>
+      <td><a href="/surveys/<%= survey.id %>"><%= survey.name %></a></td>
+      <td><%= survey.num_questions %></td>
+    </tr>
+  <% end %>
+</table>

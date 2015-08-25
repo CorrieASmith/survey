@@ -1,0 +1,89 @@
+.jvcs-background {
+    background: url('wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.jumbotron{
+  background-color: rgba(0,0,0,.2);
+  color: white;
+}
+
+.jumbotron p {
+  color: white;
+}
+
+.navbar {
+    background-color: #890404;
+    border-color: #7b0303;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #dce3e8;
+}
+
+.navbar-right {
+    padding: 15px;
+    color: white;
+}
+
+.navbar-right a {
+    color: white;
+    font-size: 1em;
+}
+
+.navbar-right a:hover {
+    color: #dce3e8;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+    text-decoration: none;
+    padding: 5px;
+    list-style-type: none
+}
+
+.btn-primary {
+  background-color: #890404;
+  border-color: #7b0303;
+}
+
+.btn-primary:hover {
+    background-color: #7b0303;
+    border-color: #7b0303;
+}
+
+.menu .btn-default:hover {
+    background-color: #dedede;
+}
+
+
+p, td, li, h1, h2, h3, h4, small {
+    letter-spacing: 2px;
+    color: #314554;
+    font-family: 'Slabo 27px', serif;
+}
+
+label, input {
+    display: block;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+a:hover {
+ letter-spacing: 2px;
+ font-family: 'Slabo 27px', serif;
+ text-decoration: none;
+}
+
+a {
+    letter-spacing: 2px;
+    font-family: 'Slabo 27px', serif;
+}
