@@ -3,6 +3,15 @@
     background-size: cover;
 }
 
+.jvcs2-background {
+    background: url('wallpaper2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+}
+
 .jumbotron{
   background-color: rgba(0,0,0,.2);
   color: white;
@@ -63,9 +72,9 @@ li {
 }
 
 
-p, td, li, h1, h2, h3, h4, small {
+p, td, li, h1, h2, h3, h4, small, th, label {
     letter-spacing: 2px;
-    color: #314554;
+    color: #fff;
     font-family: 'Slabo 27px', serif;
 }
 
@@ -78,12 +87,13 @@ form {
 }
 
 a:hover {
- letter-spacing: 2px;
- font-family: 'Slabo 27px', serif;
- text-decoration: none;
+  color: #eee;
+  font-family: 'Slabo 27px', serif;
 }
 
 a {
-    letter-spacing: 2px;
-    font-family: 'Slabo 27px', serif;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Slabo 27px', serif;
+  text-decoration: underline;
 }

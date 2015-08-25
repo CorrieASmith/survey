@@ -15,12 +15,17 @@
   <tr>
     <th>Survey Name</th>
     <th>Number of Questions</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
-
-  <% @surveys.each do |survey| %>
-    <tr>
-      <td><a href="/surveys/<%= survey.id %>"><%= survey.name %></a></td>
-      <td><%= survey.num_questions %></td>
-    </tr>
+  <% if @surveys %>
+    <% @surveys.each do |survey| %>
+      <tr>
+        <td><a href="/surveys/<%= survey.id %>"><%= survey.name %></a></td>
+        <td><%= survey.num_questions %></td>
+        <td><a href="/surveys/<%= survey.id %>/edit"><img width="20px" height="20px" src="mushroom.png" alt="edit"/></a></td>
+        <td><a href="/surveys/<%= survey.id %>/delete"><img width="20px" height="20px" src="bowser.png" alt="delete"/></a></td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
