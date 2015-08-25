@@ -1,26 +1,31 @@
 <body class="jvcs2-background">
-<h1><a href="/surveys"><%= Survey.find(@id).name %></a></h1>
+  <h1><a href="/surveys"><%= Survey.find(@id).name %></a></h1>
 
-<h3>Add a Question</h3>
+  <h3>Add a Question</h3>
 
-<form action="/surveys/<%= @id %>" method="post">
-  <div class="form-group">
-    <label for="question">Question Name</label>
-    <input type="text" class="form-control" name="question" placeholder="e.g. What's your favorite candy?">
-  </div>
+  <form action="/surveys/<%= @id %>" method="post">
+    <div class="form-group">
+      <label for="question">Question Name</label>
+      <input type="text" class="form-control" name="question" placeholder="e.g. What's your favorite candy?">
+    </div>
 
-  <button type="submit" class="btn btn-primary btn-md">Submit</button>
-</form>
+    <button type="submit" class="btn btn-primary btn-md">Submit</button>
+  </form>
 
-<table class="table">
-  <tr>
-    <th>Question Name</th>
-  </tr>
-
-  <% @questions.each do |question| %>
+  <table class="table">
     <tr>
-      <td><%= question.question %></td>
+      <th>Question Name</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
-  <% end %>
-</table>
+    <% if @questions %>
+      <% @questions.each do |question| %>
+        <tr>
+          <td><a href="/questions/<%= question.id %>"><%= question.question %></a></td>
+          <td><a href="/questions/<%= question.id %>/edit"><img width="20px" height="20px" src="/mushroom.png" alt="edit"/></a></td>
+          <td><a href="/questions/<%= question.id %>/delete"><img width="20px" height="20px" src="/bowser.png" alt="delete"/></a></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
 </body>
