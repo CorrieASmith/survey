@@ -1,11 +1,11 @@
 <h3>Edit Question</h3>
 
-<form action="/questions" method="post">
+<form action="/surveys/<%= Survey.find(@question.survey_id).id%>" method="post">
   <input type="hidden" name="_method" value="patch">
-  <input type="hidden" name="id" value="<%= @question.id %>">
+  <input type="hidden" name="question_id" value="<%= @question.id %>">
   <div class="form-group">
-    <label for="name">Question Name</label>
-    <input type="text" class="form-control" name="name" value="<%= @question.name %>">
+    <label for="question">Question Name</label>
+    <input type="text" class="form-control" name="question" value="<%= @question.question %>">
   </div>
 
   <button type="submit" class="btn btn-primary btn-md">Edit</button>
