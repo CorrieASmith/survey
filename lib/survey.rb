@@ -7,11 +7,11 @@ class Survey < ActiveRecord::Base
 
   private
 
-      define_method(:capitalize_name) do
-        words = []
-        self.name.split(" ").each() do |word|
-          words.push(word.capitalize())
-        end
-        self.name = words.join(" ")
-     end
+  define_method(:capitalize_name) do
+    words = []
+    self.name.split(" ").each() do |word|
+      words.push(word.capitalize())
+    end
+    self.name = words.join(" ")
+  end
 end

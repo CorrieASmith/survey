@@ -19,13 +19,13 @@
       <th>Delete</th>
     </tr>
     <% if @questions %>
-      <% @questions.each do |question| %>
-        <tr>
-          <td><%= question.question %></td>
-          <td><a href="/questions/<%= question.id %>/edit"><img width="20px" height="20px" src="/mushroom.png" alt="edit"/></a></td>
-          <td><a href="/questions/<%= question.id %>/delete"><img width="20px" height="20px" src="/bowser.png" alt="delete"/></a></td>
-        </tr>
-      <% end %>
+    <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.question %></td>
+      <td><a href="/questions/<%= question.id %>/edit"><img width="20px" height="20px" src="/mushroom.png" alt="edit"/></a></td>
+      <td><a href="/questions/<%= question.id %>/delete"><img width="20px" height="20px" src="/bowser.png" alt="delete"/></a></td>
+    </tr>
+    <% end %>
     <% end %>
   </table>
 </body>

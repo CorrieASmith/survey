@@ -1,0 +1,12 @@
+<body>
+  <form class="" action="index.html" method="post">
+    <% @questions.each do |question| %>
+    <div class="form-group">
+      <label for="name"><%= question.question %></label>
+      <input class="form-control" type="text" name="name">
+    </div>
+    <% end %>
+
+    <button class="btn btn-primary btn-md">Submit Survey!</button>
+  </form>
+</body>

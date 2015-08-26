@@ -96,3 +96,9 @@ patch('/questions') do
   @question = Question.all()
   erb(:question)
 end
+
+get('/surveys/:id/take_survey') do
+  @survey = Survey.find(params['id'].to_i)
+  @questions = @survey.questions
+  erb(:take_survey)
+end
